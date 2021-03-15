@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         // 初期画像の表示
         if (mCursor!!.moveToFirst()) {
             setImageInfo(mCursor!!, imageView1)
-        }
+        } else return  // 画像が１枚もない場合はメソッドを抜ける
 
         // 進むボタン
         buttonNext.setOnClickListener {
